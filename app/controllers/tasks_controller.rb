@@ -28,12 +28,14 @@ class TasksController < ApplicationController
   end
     
   def update
+    @task=Task.find_by(id:params[:id])
+    
     if @task.update(task_params)
       flash[:success] = 'Task は正常に更新されました'
       redirect_to @task
     else
       flash.now[:danger] = 'Task は更新されませんでした'
-      render(edit_task_path(@task))
+      render:edit
     end
 
   end
