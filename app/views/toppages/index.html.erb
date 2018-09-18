@@ -1,5 +1,11 @@
 <% if logged_in? %>
-  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+  <h4>ログイン完了ユーザ: <%= current_user.name %></h4>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>You posted <%=current_user.tasks.count%> tasks</h1>
+      <%= link_to 'Post task!!', new_task_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">

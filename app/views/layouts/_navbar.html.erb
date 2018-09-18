@@ -14,8 +14,8 @@
         <ul class="nav navbar-nav navbar-right">
           
           <%if logged_in?%>
-          <li><%=link_to "タスク一覧", tasks_path%></li>
-          <li><%= link_to  '新規タスクの投稿', new_task_path %></li>
+          <li><%=link_to "Task list", tasks_path%></li>
+          <li><%= link_to  'Post new task', new_task_path %></li>
           <li><%= link_to 'Logout', logout_path, method: :delete %></li>
           <%else%>
             <li><%= link_to 'Signup', signup_path %></li>
