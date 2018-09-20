@@ -14,7 +14,7 @@
         <ul class="nav navbar-nav navbar-right">
           
           <%if logged_in?%>
-          <li><%=link_to "Task list", tasks_path%></li>
+          <li><%=link_to "Task", tasks_path%></li>
           <li><%= link_to  'Post new task', new_task_path %></li>
           <li><%= link_to 'Logout', logout_path, method: :delete %></li>
           <%else%>
